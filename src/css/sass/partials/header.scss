@@ -5,9 +5,15 @@
 
 
 // Header container
-.header {}
+.header {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
 
 // Logo
-.logo {}
+.logo {
+    lost-column:2/6 2 flex;
+}
 
 .logo-img {}

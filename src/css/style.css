@@ -56,7 +56,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
   font-size: 140%;
   line-height: 1.5;
-  color: #444;
+  color: #767676;
   background-color: #fff; }
 
 img {
@@ -64,7 +64,7 @@ img {
   vertical-align: middle; }
 
 a {
-  color: #444;
+  color: #767676;
   text-decoration: none; }
   a:focus, a:hover {
     text-decoration: underline; }
@@ -93,19 +93,19 @@ input[type="search"] {
  * Alignment
  */
 .alignnone {
-  margin: 5px 15px 15px 0; }
+  margin: 0px 0px 0px 0; }
 
 .aligncenter {
   display: block;
-  margin: 5px auto; }
+  margin: 0px auto; }
 
 .alignright {
   float: right;
-  margin: 5px 0 15px 15px; }
+  margin: 0px 0 0px 0px; }
 
 .alignleft {
   float: left;
-  margin: 5px 15px 15px 0; }
+  margin: 0px 0px 0px 0; }
 
 /**
  * Gallery & images
@@ -114,7 +114,7 @@ input[type="search"] {
   background: #fff;
   border: thin solid #F0F0F0;
   max-width: 95%;
-  padding: 5px 5px;
+  padding: 0px 0px;
   text-align: center; }
   .wp-caption img {
     width: auto;
@@ -127,7 +127,7 @@ input[type="search"] {
 .wp-caption .wp-caption-text,
 .gallery-caption {
   margin: 0;
-  padding: 0 5px 5px;
+  padding: 0 0px 0px;
   font-size: 140%;
   line-height: 1.5; }
 
@@ -152,8 +152,8 @@ input[type="search"] {
  * ---
  */
 .wrapper {
-  max-width: 1280px;
-  padding: 0 15px;
+  max-width: 100%;
+  padding: 0 0px;
   margin: 0 auto;
   position: relative; }
 
@@ -161,11 +161,50 @@ input[type="search"] {
  * partials/header
  * ---
  */
+.header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.logo {
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+  width: calc(99.9% * 2/6 - (30px - 30px * 2/6)); }
+
+.logo:nth-child(1n) {
+  margin-right: 30px;
+  margin-left: 0; }
+
+.logo:last-child {
+  margin-right: 0; }
+
+.logo:nth-child(2n) {
+  margin-right: 0;
+  margin-left: auto; }
+
 /**
  * partials/nav
  * ---
  * Menus
  */
+.nav ul {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap; }
+  .nav ul li {
+    list-style: none;
+    margin-right: 12px; }
+    .nav ul li a {
+      text-transform: uppercase;
+      font-family: "Raleway", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: #0f9e49; }
+
 /**
  * partials/sidebar
  * ---
@@ -223,3 +262,7 @@ input[type="search"] {
   h2,
   h3 {
     page-break-after: avoid; } }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600; }

@@ -20,3 +20,7 @@
 @import "partials/footer";
 @import "partials/print";
 
+h1, h2, h3, h4, h5, h6 {
+    font-family:$font-raleway;
+    font-weight:600;
+}

@@ -9,6 +9,10 @@
  */
 
 $font-family-base: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
+$font-pro: 'Source Sans Pro', sans-serif;
+$font-raleway: 'Raleway', sans-serif;
+
+
 $font-size-base: 140%;
 $line-height-base: 1.5;
 
@@ -17,21 +21,24 @@ $line-height-base: 1.5;
  * Colors
  */
 
-$text-color: #444;
+$text-color: #767676;
 $body-bg: #fff;
 $selection-bg: #04A4CC;
+$verde-minppau:#0f9e49;
+$morado-minppau:#5e2d85;
+
 
 
 /**
  * Grid
  */
 
-$wrapper-width: 1280px;
+$wrapper-width: 100%;
 
 
-$padding-horizontal-base: 5px;
-$padding-vertical-base: 5px;
-$margin-horizontal-base: 5px;
-$margin-vertical-base: 5px;
-$margin-horizontal-large: 15px;
-$margin-vertical-large: 15px;
+$padding-horizontal-base: 0px;
+$padding-vertical-base: 0px;
+$margin-horizontal-base: 0px;
+$margin-vertical-base: 0px;
+$margin-horizontal-large: 0px;
+$margin-vertical-large: 0px;
