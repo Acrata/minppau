@@ -19,8 +19,141 @@
 @import "partials/sidebar";
 @import "partials/footer";
 @import "partials/print";
+@import "partials/dl-menu";
+body {
+    font-family:$font-pro; 
+}
+
+@media (max-width:900px) {
+    #dl-menu {
+    display:flex;
+    background-color: $verde-minppau;
+    }
+    .logo-mobile {
+        margin:auto;
+    }
+    ul.dl-menu {
+        position: absolute;
+        right:0;
+        z-index:2;
+    }
+    button.dl-trigger {
+         z-index:5555;
+    }
+   .header
+   {
+        display:none;
+    }
+}
+@media (min-width:900px) {
+    #dl-menu {
+        display:none;
+    }
+}
 
 h1, h2, h3, h4, h5, h6 {
+    margin:0;
     font-family:$font-raleway;
     font-weight:600;
 }
+
+.hero {
+     height:70vh;
+     lost-column:2/2;
+     background-color:#20d0ff;
+     position:relative;
+}
+
+.hero__caps {
+     lost-align:center;
+     lost-column:2/2;
+     height:30vh;
+     h3 , p {
+         font-size:2em;
+         text-align: center;
+         color:aliceblue;
+         text-transform: uppercase;
+     }
+     p {
+         position:relative;
+         top:90%;
+         font-size:2em;
+         height:-131%;
+     }
+}
+
+.hero__btn  {
+     lost-column:2/2;
+     position: absolute;
+     bottom:-12px;
+     margin:auto;
+     text-align:center;
+}
+.hero__btn span {
+     width:222px;
+     font-size:2em;
+     font-family:$font-raleway;
+     font-weight:600;
+     z-index:444;
+     text-align: center;
+     color:#fff;
+     background-color:$rojo-minppau;
+     padding:12px;
+     cursor:pointer;
+     &:hover {
+          background-color:lighten($morado-minppau,13%);
+     }
+}
+
+.ayuda {
+     z-index:-2;
+     lost-column:2/2;
+     position:relative;
+     height:100vh;
+        span {
+            font-size:2em;
+            order:1;
+            color:$verde-minppau;
+            position:relative;
+            left:25%;
+            top:10%;
+            padding-bottom:20px;
+        }
+}
+
+    .ayuda header {
+     lost-align:center;
+     height:100vh;
+        h3 {
+            font-size:2em;
+            text-align:center;
+            order:0;
+        }
+}
+
+.panels {
+         height:100vh;
+        lost-column:2/2 ;
+}
+    .panel-item {
+        lost-align:center;
+        background-color:$text-color;
+        height:233px; 
+        margin:10px;
+        display:block;
+        a{
+            color:$body-bg; 
+        }
+    }
+
+    .videos {
+        lost-column:2/2 ;
+        height:100vh;
+    }
+    .video-cont {
+        background-color: $verde-minppau;
+    }
+
+    .video-item {
+        background-color: #F0F0F0;
+    }

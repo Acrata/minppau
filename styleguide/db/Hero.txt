@@ -1,0 +1,12 @@
+[
+  {
+    "id": 2,
+    "name": "Hero",
+    "code": "<section class=\"hero\">\n            <div class=\"hero__caps\">\n                <h3>Hagamos una vaca</h3>\n                <p>Por las hallacas</p>\n             </div>\n            <div class=\"hero__btn\">\n                <span>Enterate aqui</span>\n            </div>\n\n        </section>",
+    "description": "Hero display",
+    "inlineCss": "#snippet { \n\n}",
+    "includeJs": "false",
+    "isEdited": true,
+    "isDeleted": false
+  }
+]

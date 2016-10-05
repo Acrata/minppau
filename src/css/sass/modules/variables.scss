@@ -9,8 +9,10 @@
  */
 
 $font-family-base: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
-$font-pro: 'Source Sans Pro', sans-serif;
-$font-raleway: 'Raleway', sans-serif;
+//-- typo:start --//
+$font-pro: 'Source Sans Pro', sans-serif; // 400
+$font-raleway: 'Raleway', sans-serif; // 400, 500, 600
+//-- typo:end --//
 
 
 $font-size-base: 140%;
@@ -20,12 +22,14 @@ $line-height-base: 1.5;
 /**
  * Colors
  */
-
+//-- colors:start --//
 $text-color: #767676;
 $body-bg: #fff;
 $selection-bg: #04A4CC;
 $verde-minppau:#0f9e49;
 $morado-minppau:#5e2d85;
+$rojo-minppau:#d01e35;
+//-- colors:end --//
 
 
 

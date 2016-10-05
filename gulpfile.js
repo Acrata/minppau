@@ -88,6 +88,11 @@ gulp.task( "sass", function () {
         .pipe(postcss(processors))
 		.pipe( gulp.dest( "src/css" ) );
 });
+/**STYLEGUIDE*/
+
+gulp.task('start-styleguide', function () {
+  styleguide.startServer();
+});
 
 /** STYLES */
 gulp.task( "styles", [ "sass" ], function() {

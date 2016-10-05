@@ -1,0 +1,55 @@
+[
+  {
+    "name": "theme",
+    "colors": {
+      "#767676": [
+        "$text-color"
+      ],
+      "#04A4CC": [
+        "$selection-bg"
+      ],
+      "#5e2d85": [
+        "$morado-minppau"
+      ],
+      "#fff": [
+        "$body-bg"
+      ],
+      "#d01e35": [
+        "$rojo-minppau"
+      ],
+      "#0f9e49": [
+        "$verde-minppau"
+      ]
+    },
+    "typography": [
+      {
+        "variable": "$font-pro",
+        "value": "'Source Sans Pro', sans-serif",
+        "weights": [
+          {
+            "weight": 400,
+            "italic": false
+          }
+        ]
+      },
+      {
+        "variable": "$font-raleway",
+        "value": "'Raleway', sans-serif",
+        "weights": [
+          {
+            "weight": 400,
+            "italic": false
+          },
+          {
+            "weight": 500,
+            "italic": false
+          },
+          {
+            "weight": 600,
+            "italic": false
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "Header Nav Menu",
+    "code": "<header class=\"header clear\" role=\"banner\">\n\n\t\t\t\t\t<!-- logo -->\n\t\t\t\t\t<div class=\"logo\">\n\t\t\t\t\t\t<a href=\"http://localhost/minppau\">\n\t\t\t\t\t\t\t<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->\n\t\t\t\t\t\t\t<img src=\"http://localhost/minppau/wp-content/themes/minppau/src/img/logo.png\" alt=\"Logo\" class=\"logo-img\">\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</div>\n\t\t\t\t\t<!-- /logo -->\n\n\t\t\t\t\t<!-- nav -->\n\t\t\t\t\t<nav class=\"nav\" role=\"navigation\">\n\t\t\t\t\t\t<ul><li id=\"menu-item-4\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-4\"><a href=\"#\">El Ministerio</a></li>\n<li id=\"menu-item-5\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-5\"><a href=\"#\">Agricultura Urbana</a></li>\n<li id=\"menu-item-8\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-8\"><a href=\"#\">CONVOCATORIAS</a></li>\n<li id=\"menu-item-6\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-6\"><a href=\"#\">Ciudades Productivas</a></li>\n<li id=\"menu-item-9\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-9\"><a href=\"#\">DÓNDE ESTAMOS</a></li>\n</ul>\t\t\t\t\t</nav>\n\t\t\t\t\t<!-- /nav -->\n\n\t\t\t</header>",
+    "description": "##Menu de navegacion principal para el sitio web del MinPPau",
+    "inlineCss": "#snippet { \n  \n}",
+    "includeJs": "false",
+    "isEdited": true,
+    "isDeleted": false
+  }
+]
