@@ -15,6 +15,9 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<?php wp_head(); ?>
+
+        <script src="https://use.fontawesome.com/015185764a.js"></script>
+
 		<script>
         // conditionizr.com
         // configure environment tests

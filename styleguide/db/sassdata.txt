@@ -11,6 +11,9 @@
       "#5e2d85": [
         "$morado-minppau"
       ],
+      "#393536": [
+        "$dark-minppau"
+      ],
       "#fff": [
         "$body-bg"
       ],

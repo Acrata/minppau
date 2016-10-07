@@ -20,6 +20,59 @@
 @import "partials/footer";
 @import "partials/print";
 @import "partials/dl-menu";
+
+@media (min-width:800px) {
+    .news-list {
+        lost-flex-container:row;
+        .news-item {
+        lost-column:2/6 3 flex;
+             
+        }
+    }
+    .panels {
+        lost-flex-container:row;
+        .panel-item {
+        lost-column:2/8 4 flex;
+        }
+    }
+    .footer {
+        lost-flex-container:row;
+        padding:12px;
+        section {
+        lost-column:2/6 3 flex;
+        }
+         
+    }
+    .video-cont {
+        lost-flex-container:row;
+        background-color:$verde-minppau !important;
+            .video-list {
+                lost-flex-container:column;
+                lost-column:2/6 2 flex;
+                align-items:center;
+                justify-content:center;
+                order:2;
+                margin: 0 auto !important;
+                position:relative;
+                h4{
+                     text-transform:uppercase;
+                     color:$body-bg;
+                     font-size:1.5em;
+                     padding:12px;
+                }
+                .video-item {
+                    background-color:lighten($verde-minppau,22%);
+                    flex:1;
+                    width:100%;
+                }
+            }
+            .video-disp {
+                order:0;
+                lost-column:4/6 flex;
+            }
+        }
+}
+
 body {
     font-family:$font-pro; 
 }
@@ -67,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero__caps {
      lost-align:center;
      lost-column:2/2;
-     height:30vh;
+     height:30%;
      h3 , p {
          font-size:2em;
          text-align: center;
@@ -108,22 +161,24 @@ h1, h2, h3, h4, h5, h6 {
 .ayuda {
      z-index:-2;
      lost-column:2/2;
-     position:relative;
-     height:100vh;
+     height:100%;
+            position:relative;
         span {
+            width:33%;
+            margin:0px;
             font-size:2em;
             order:1;
             color:$verde-minppau;
-            position:relative;
+            position:absolute;
             left:25%;
-            top:10%;
+            top:24%;
             padding-bottom:20px;
         }
 }
 
     .ayuda header {
      lost-align:center;
-     height:100vh;
+     height:10vh;
         h3 {
             font-size:2em;
             text-align:center;
@@ -132,7 +187,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .panels {
-         height:100vh;
         lost-column:2/2 ;
 }
     .panel-item {
@@ -148,12 +202,107 @@ h1, h2, h3, h4, h5, h6 {
 
     .videos {
         lost-column:2/2 ;
-        height:100vh;
+        height:100%;
+        h3 {
+            font-size:2em;
+            text-align: center;
+            text-transform: uppercase;
+        }
     }
     .video-cont {
-        background-color: $verde-minppau;
+        background-color: $body-bg;
+        padding:12px;
     }
 
     .video-item {
+        text-align: center;
+        padding:12px;
+        margin-bottom:12px;
         background-color: #F0F0F0;
+    }
+
+    .prensa {
+        margin:12px;
+        h3 {
+            font-size:2em;
+            text-align: center;
+            text-transform: uppercase;
+
+        }
+    }
+
+    .newsletter {
+        padding-top:12px;
+    }
+
+    .newsletter-cont {
+        background-color:$verde-minppau;
+        padding:20px;
+    }
+    .newsletter-cont h4{
+        margin:12px;
+        padding-top:20px;
+        text-align:center;
+        font-size:1.5em;
+        color:$body-bg;
+    }
+
+    .newsletter-cont form{
+         display:flex;
+         flex-flow:column;
+         max-width:320px;
+         margin:auto;
+         &>* {
+             margin:12px;
+         }
+    }
+
+    .footer {
+         background-color:$text-color;
+         color:$body-bg;
+    }
+
+    .footer h3 {
+        padding:12px;
+    }
+
+    .footer .sedes .sedes-list {
+        list-style:none;
+        text-align:center;
+        margin:0;
+        padding: 0;
+        li { 
+            a{
+                color:$body-bg;
+                
+            }
+        }
+    }
+
+    .footer .social-footer  {
+        ul {
+        list-style:none;
+        text-align:center;
+        margin:0;
+        padding: 0;
+        display:flex;
+        justify-content:center;
+            li {
+                padding:6px;
+                a {
+                color:$dark-minppau;
+
+                }
+            }
+        }
+    }
+
+    .footer .footer-phone {
+        p {
+            text-align:center;
+            margin:0;
+            padding: 44px;
+            font-size:2em;
+            text-transform:uppercase;
+        }
     }

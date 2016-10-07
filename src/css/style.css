@@ -689,6 +689,114 @@ All this is done for any sub-level being entered.
 .demo-5 .dl-menuwrapper ul {
   background: #643771; }
 
+@media (min-width: 800px) {
+  .news-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap; }
+    .news-list .news-item {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      width: calc(99.9% * 2/6 - (30px - 30px * 2/6)); }
+    .news-list .news-item:nth-child(1n) {
+    margin-right: 30px;
+    margin-left: 0; }
+    .news-list .news-item:last-child {
+    margin-right: 0; }
+    .news-list .news-item:nth-child(3n) {
+    margin-right: 0;
+    margin-left: auto; }
+  .panels {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap; }
+    .panels .panel-item {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      width: calc(99.9% * 2/8 - (30px - 30px * 2/8)); }
+    .panels .panel-item:nth-child(1n) {
+    margin-right: 30px;
+    margin-left: 0; }
+    .panels .panel-item:last-child {
+    margin-right: 0; }
+    .panels .panel-item:nth-child(4n) {
+    margin-right: 0;
+    margin-left: auto; }
+  .footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    padding: 12px; }
+    .footer section {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      width: calc(99.9% * 2/6 - (30px - 30px * 2/6)); }
+    .footer section:nth-child(1n) {
+    margin-right: 30px;
+    margin-left: 0; }
+    .footer section:last-child {
+    margin-right: 0; }
+    .footer section:nth-child(3n) {
+    margin-right: 0;
+    margin-left: auto; }
+  .video-cont {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    background-color: #0f9e49 !important; }
+    .video-cont .video-list {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      width: calc(99.9% * 2/6 - (30px - 30px * 2/6));
+      -ms-flex-align: center;
+          align-items: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-order: 2;
+          order: 2;
+      margin: 0 auto !important;
+      position: relative; }
+    .video-cont .video-list:nth-child(1n) {
+    margin-right: 30px;
+    margin-left: 0; }
+    .video-cont .video-list:last-child {
+    margin-right: 0; }
+    .video-cont .video-list:nth-child(2n) {
+    margin-right: 0;
+    margin-left: auto; }
+      .video-cont .video-list h4 {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 1.5em;
+        padding: 12px; }
+      .video-cont .video-list .video-item {
+        background-color: #32ec7d;
+        -ms-flex: 1;
+            flex: 1;
+        width: 100%; }
+    .video-cont .video-disp {
+      -ms-flex-order: 0;
+          order: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      width: calc(99.9% * 4/6 - (30px - 30px * 4/6)); }
+    .video-cont .video-disp:nth-child(1n) {
+    margin-right: 30px;
+    margin-left: 0; }
+    .video-cont .video-disp:last-child {
+    margin-right: 0; }
+    .video-cont .video-disp:nth-child(6n) {
+    margin-right: 0;
+    margin-left: auto; } }
+
 body {
   font-family: "Source Sans Pro", sans-serif; }
 
@@ -741,7 +849,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero__caps {
   position: relative;
   width: calc(99.9% * 2/2 - (30px - 30px * 2/2));
-  height: 30vh; }
+  height: 30%; }
 
 .hero__caps:nth-child(1n) {
   float: left;
@@ -816,8 +924,8 @@ h1, h2, h3, h4, h5, h6 {
 .ayuda {
   z-index: -2;
   width: calc(99.9% * 2/2 - (30px - 30px * 2/2));
-  position: relative;
-  height: 100vh; }
+  height: 100%;
+  position: relative; }
 
 .ayuda:nth-child(1n) {
   float: left;
@@ -834,18 +942,20 @@ h1, h2, h3, h4, h5, h6 {
 .ayuda:nth-child(2n + 1) {
   clear: both; }
   .ayuda span {
+    width: 33%;
+    margin: 0px;
     font-size: 2em;
     -ms-flex-order: 1;
         order: 1;
     color: #0f9e49;
-    position: relative;
+    position: absolute;
     left: 25%;
-    top: 10%;
+    top: 24%;
     padding-bottom: 20px; }
 
 .ayuda header {
   position: relative;
-  height: 100vh; }
+  height: 10vh; }
 
 .ayuda header > * {
   position: absolute;
@@ -862,7 +972,6 @@ h1, h2, h3, h4, h5, h6 {
         order: 0; }
 
 .panels {
-  height: 100vh;
   width: calc(99.9% * 2/2 - (30px - 30px * 2/2)); }
 
 .panels:nth-child(1n) {
@@ -900,7 +1009,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .videos {
   width: calc(99.9% * 2/2 - (30px - 30px * 2/2));
-  height: 100vh; }
+  height: 100%; }
 
 .videos:nth-child(1n) {
   float: left;
@@ -916,9 +1025,84 @@ h1, h2, h3, h4, h5, h6 {
 
 .videos:nth-child(2n + 1) {
   clear: both; }
+  .videos h3 {
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase; }
 
 .video-cont {
-  background-color: #0f9e49; }
+  background-color: #fff;
+  padding: 12px; }
 
 .video-item {
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 12px;
   background-color: #F0F0F0; }
+
+.prensa {
+  margin: 12px; }
+  .prensa h3 {
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase; }
+
+.newsletter {
+  padding-top: 12px; }
+
+.newsletter-cont {
+  background-color: #0f9e49;
+  padding: 20px; }
+
+.newsletter-cont h4 {
+  margin: 12px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff; }
+
+.newsletter-cont form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  max-width: 320px;
+  margin: auto; }
+  .newsletter-cont form > * {
+    margin: 12px; }
+
+.footer {
+  background-color: #767676;
+  color: #fff; }
+
+.footer h3 {
+  padding: 12px; }
+
+.footer .sedes .sedes-list {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0; }
+  .footer .sedes .sedes-list li a {
+    color: #fff; }
+
+.footer .social-footer ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .footer .social-footer ul li {
+    padding: 6px; }
+    .footer .social-footer ul li a {
+      color: #393536; }
+
+.footer .footer-phone p {
+  text-align: center;
+  margin: 0;
+  padding: 44px;
+  font-size: 2em;
+  text-transform: uppercase; }
