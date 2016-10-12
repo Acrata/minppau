@@ -1,11 +1,35 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
+                <section class="sedes">
+                    <h3>Sedes</h3>
+                    <ul class="sedes-list">
+                        <li><a href="">El paraiso</a></li>
+                        <li><a href="">23 de Enero</a></li>
+                        <li><a href="">Coche</a></li>
+                        <li><a href="">San Juan</a></li>
+                        <li><a href="">La Pastora</a></li>
+                        <li><a href="">Santa Rosalía</a></li>
+                        <li><a href="">El Valle</a></li>
+                        <li><a href="">Altagracia</a></li>
+                        <li><a href="">San Bernardino</a></li>
+                        <li><a href="">San Pedro</a></li>
+                        <li><a href="">El Recreo</a></li>
+                    </ul>
+                </section>
+                <section class="social-footer">
+                    <h3>Redes Sociales</h3>
+                    <ul>
 
+                        <li><a href=""><i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+                        <li><a href=""><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a></li>
+                    </ul>
+                </section>
+                <section class="footer-phone">
+                    <h3>Teléfono</h3>
+                    <p>0800-soyagro</p>
+                </section>
 				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
 				<!-- /copyright -->
 
 			</footer>
@@ -15,6 +39,13 @@
 		<!-- /wrapper -->
 
 		<?php wp_footer(); ?>
+		<script>
+			$(function() {
+				$( '#dl-menu' ).dlmenu({
+					animationClasses : { classin : 'dl-animate-in-5', classout : 'dl-animate-out-5' }
+				});
+			});
+		</script>
 
 		<!-- analytics -->
 		<script>

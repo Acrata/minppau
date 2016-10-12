@@ -955,7 +955,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .ayuda header {
   position: relative;
-  height: 10vh; }
+  height: 60vh; }
 
 .ayuda header > * {
   position: absolute;
@@ -1028,7 +1028,9 @@ h1, h2, h3, h4, h5, h6 {
   .videos h3 {
     font-size: 2em;
     text-align: center;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #0f9e49;
+    margin: 120px 0px; }
 
 .video-cont {
   background-color: #fff;
@@ -1044,6 +1046,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 12px; }
   .prensa h3 {
     font-size: 2em;
+    margin: 120px;
+    color: #0f9e49;
     text-align: center;
     text-transform: uppercase; }
 

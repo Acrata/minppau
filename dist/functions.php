@@ -61,6 +61,17 @@ if (function_exists('add_theme_support'))
 /*------------------------------------*\
     Functions
 \*------------------------------------*/
+class mi_walker_nav extends Walker_Nav_Menu
+{
+  function start_lvl( &$output, $depth = 0, $args = array() ) {
+
+                  $indent = str_repeat("\t", $depth);
+	                $output .= "\n$indent<ul class=\"dl-submenu\">\n";
+	        }
+
+
+}
+
 
 // HTML5 Blank navigation
 function html5blank_nav()
@@ -80,13 +91,21 @@ function html5blank_nav()
         'after'           => '',
         'link_before'     => '',
         'link_after'      => '',
-        'items_wrap'      => '<ul>%3$s</ul>',
+        'items_wrap'      => '<ul class=dl-menu>%3$s</ul>',
         'depth'           => 0,
-        'walker'          => ''
+        'walker'          => new mi_walker_nav()
         )
     );
 }
 
+
+function minppau_menu() {
+
+            // dlmenu
+            wp_register_script('dlmenu', get_template_directory_uri() . '/js/dlmenu.js', array(), '1.0.0',false);
+            wp_enqueue_script('dlmenu');
+}
+            add_action( 'wp_enqueue_scripts', 'minppau_menu' );
 // Load HTML5 Blank scripts (header.php)
 function html5blank_header_scripts()
 {

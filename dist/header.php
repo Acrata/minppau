@@ -15,6 +15,9 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<?php wp_head(); ?>
+
+        <script src="https://use.fontawesome.com/015185764a.js"></script>
+
 		<script>
         // conditionizr.com
         // configure environment tests
@@ -29,6 +32,23 @@
 
 		<!-- wrapper -->
 		<div class="wrapper">
+			<div id="dl-menu" class="dl-menuwrapper">
+				<button class="dl-trigger">Open Menu</button>
+				<!-- nav -->
+
+				<?php html5blank_nav(); ?>
+
+			<!-- /nav -->
+					<!-- logo -->
+					<div class="logo-mobile">
+						<a href="<?php echo home_url(); ?>">
+							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
+						</a>
+					</div>
+                <!-- /logo -->
+            </div>
+
 
 			<!-- header -->
 			<header class="header clear" role="banner">
@@ -40,7 +60,7 @@
 							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
 						</a>
 					</div>
-					<!-- /logo -->
+                <!-- /logo -->
 
 					<!-- nav -->
 					<nav class="nav" role="navigation">

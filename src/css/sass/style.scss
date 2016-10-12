@@ -178,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .ayuda header {
      lost-align:center;
-     height:10vh;
+     height:60vh;
         h3 {
             font-size:2em;
             text-align:center;
@@ -207,6 +207,8 @@ h1, h2, h3, h4, h5, h6 {
             font-size:2em;
             text-align: center;
             text-transform: uppercase;
+            color:$verde-minppau;
+            margin:120px 0px;
         }
     }
     .video-cont {
@@ -225,6 +227,8 @@ h1, h2, h3, h4, h5, h6 {
         margin:12px;
         h3 {
             font-size:2em;
+            margin:120px;
+            color:$verde-minppau;
             text-align: center;
             text-transform: uppercase;
 
