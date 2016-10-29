@@ -104,6 +104,31 @@ function minppau_menu() {
             // dlmenu
             wp_register_script('dlmenu', get_template_directory_uri() . '/js/dlmenu.js', array(), '1.0.0',false);
             wp_enqueue_script('dlmenu');
+
+            // gsap
+            wp_register_script('gsap', get_template_directory_uri() . '/bower_components/gsap/src/uncompressed/TweenMax.js', array() ,false);
+            //wp_enqueue_script('gsap');
+
+            // gsap
+            wp_register_script('gsaptext', get_template_directory_uri() . '/bower_components/gsap/src/uncompressed/plugins/TextPlugin.js', array() ,false);
+            wp_enqueue_script('gsaptext');
+
+            // animation.gsap
+            wp_register_script('anigsap', get_template_directory_uri() . '/bower_components/scrollmagic}/scrollmagic/uncompressed/plugins/animation.gsap.js', array('scrollmagic'), '1.0.0',false);
+            wp_enqueue_script('anigsap');
+
+
+            // scrollmagic
+            wp_register_script('scrollmagic', get_template_directory_uri() . '/bower_components/scrollmagic}/scrollmagic/uncompressed/ScrollMagic.js', array('gsap' ), '1.0.0',false);
+            //wp_enqueue_script('scrollmagic');
+
+            // Headroojs
+            wp_register_script('headroom', get_template_directory_uri() . '/bower_components/headroom.js/dist/headroom.js', array(), '1.0.0',false);
+            wp_enqueue_script('headroom');
+
+            // HeadroojsJquery
+            wp_register_script('headroom-jq', get_template_directory_uri() . '/bower_components/headroom.js/dist/jQuery.headroom.js', array(), '1.0.0',false);
+            wp_enqueue_script('headroom-jq');
 }
             add_action( 'wp_enqueue_scripts', 'minppau_menu' );
 // Load HTML5 Blank scripts (header.php)
@@ -404,7 +429,7 @@ add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditi
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
-add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
+//add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
@@ -442,6 +467,8 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 // Shortcodes
 add_shortcode('html5_shortcode_demo', 'html5_shortcode_demo'); // You can place [html5_shortcode_demo] in Pages, Posts now.
 add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [html5_shortcode_demo_2] in Pages, Posts now.
+add_shortcode('minpp_nav_display', 'minpp_nav_display'); // Place [html5_shortcode_demo_2] in Pages, Posts now.
+add_shortcode('soyagro_widget', 'soyagro_widget'); // Place [html5_shortcode_demo_2] in Pages, Posts now.
 
 // Shortcodes above would be nested like this -
 // [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
@@ -491,15 +518,70 @@ function create_post_type_html5()
 /*------------------------------------*\
     ShortCode Functions
 \*------------------------------------*/
+//SOyagro
 
+function soyagro_widget(){
+    $logo_url_minppau = get_template_directory_uri();
+}
 // Shortcode Demo with Nested Capability
 function html5_shortcode_demo($atts, $content = null)
 {
     return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
 }
 
+//nav shortcode
+//
+function minpp_nav_display() {
+    return minpp_nav();
+}
+
+function minpp_nav()
+{
+    wp_nav_menu(
+    array(
+        'theme_location'  => 'extra-menu',
+        'menu'            => '',
+        'container'       => 'div',
+        'container_class' => 'menu-{menu slug}-container',
+        'container_id'    => '',
+        'menu_class'      => 'menu-extra',
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul>%3$s</ul>',
+        'depth'           => 0,
+        'walker'          => ''
+        )
+    );
+}
 // Shortcode Demo with simple <h2> tag
 function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
 {
     return '<h2>' . $content . '</h2>';
 }
+
+
+  add_filter('piklist_taxonomies', 'sedes');
+
+  function sedes($taxonomies) {
+     $taxonomies[] = array(
+        'post_type' => 'page'
+        ,'name' => 'sedes'
+        ,'show_admin_column' => true
+        ,'configuration' => array(
+          'hierarchical' => true
+          ,'labels' => piklist('taxonomy_labels', 'Sedes')
+          ,'hide_meta_box' => false
+          ,'show_ui' => true
+          ,'query_var' => true
+          ,'rewrite' => array(
+            'slug' => 'sedes'
+          )
+        )
+      );
+    return $taxonomies;
+  }

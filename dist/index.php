@@ -13,10 +13,10 @@
 		</section>
 		<!-- /section -->
  <!--Hero-->
-        <section class="hero">
+        <section id="hero" class="hero">
             <div class="hero__image"></div>
             <div class="hero__caps">
-                <h3>Hagamos una vaca</h3>
+                <h3 id="hero-text" >Hagamos una vaca</h3>
                 <p>Por las hallacas</p>
              </div>
             <div class="hero__btn">
@@ -28,19 +28,19 @@
  <!--Ayuda-->
 
         <section class="ayuda">
-                <span>0800-soyagro</span>
             <header>
                 <h3>Queremos ayudarte</h3>
             </header>
-            <div class="panels">
-                <div class="panel-item"><a href="#">Item1</a></div>
-                <div class="panel-item"><a href="#">Item2</a></div>
-                <div class="panel-item"><a href="#">Item3</a></div>
-                <div class="panel-item"><a href="#">Item4</a></div>
+                <span>0800-soyagro</span>
+            <div id="panels" class="panels">
+                <div class="panel-item"><a href="#">Cursos</a></div>
+                <div class="panel-item"><a href="#">Acompañamientos</a></div>
+                <div class="panel-item"><a href="#">Herramientas</a></div>
+                <div class="panel-item"><a href="#">Semillas</a></div>
             </div>
         </section>
  <!--Videos-->
-        <section class="videos">
+        <section class="videos" id="videos-minppau">
         <h3>Lo que estamos haciendo</h3>
             <div class="video-cont">
                 <div class="video-list">

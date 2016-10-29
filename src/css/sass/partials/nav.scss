@@ -6,12 +6,14 @@
 
 
 .nav {
-    ul {
+    ul.dl-menu {
         display:flex;
-        flex-flow:row nowrap;
+        flex-flow:row;
+        justify-content:space-between;
         li{
+           min-width:120px;
+            text-align: center; 
             list-style:none;
-            margin-right:12px;
             a{
                 text-transform: uppercase;
                 font-family:$font-raleway;
@@ -23,6 +25,24 @@
     }
 }
 
+.nav ul.dl-submenu {
+    li{
+        padding:12px;
+        text-align: center; 
+        min-width:120px;
+        a{
+            color:$body-bg;
+            font-size:12px;
+        }
+    }
+}
+ul.dl-submenu li {
+  display: none // HIDE
+}
+li:hover > ul.dl-submenu li {
+  display: block // SHOW
+  }
+    
 .menu {}
 
 .sub-menu {}

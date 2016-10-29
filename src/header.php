@@ -8,7 +8,7 @@
 		<link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
 		<link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
-        <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600|Source+Sans+Pro" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,800|Source+Sans+Pro" rel="stylesheet">
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,7 @@
 		<?php wp_head(); ?>
 
         <script src="https://use.fontawesome.com/015185764a.js"></script>
+
 
 		<script>
         // conditionizr.com
@@ -51,7 +52,7 @@
 
 
 			<!-- header -->
-			<header class="header clear" role="banner">
+			<header id="header" class="header clear" role="banner" data-headroom>
 
 					<!-- logo -->
 					<div class="logo">

@@ -20,8 +20,20 @@ var gulp = require( "gulp" ),
 		"src/js/lib/conditionizr-4.3.0.min.js",
 		/** jQuery */
 		"src/bower_components/jquery/dist/jquery.js",
+		/** Scrollmagic */
+        "src/bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js",
+		/** Scrollmagic */
+        "src/bower_components/gsap/src/uncompressed/TweenMax.js",
+		/** Scrollmagic */
+        "src/bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js",
+		/** Scrollmagic */
+        "src/bower_components/headroom.js/dist/headroom.js",
+		/** Scrollmagic */
+        "src/bower_components/headroom.js/dist/jQuery.headroom.js",
 		/** Page scripts */
-		"src/js/scripts.js"
+		"src/js/scripts.js",
+		/** Dlmenu scripts */
+        "src/js/dlmenu.js"
 	],
 	/** @type {Object of Array} CSS source files to concatenate and minify */
 	cssminSrc = {
@@ -68,6 +80,7 @@ gulp.task( "copy", function() {
 	return gulp.src([
 			"src/*.{php,png,css}",
 			"src/modules/*.php",
+			"src/piklist/**/*.php",
 			"src/img/**/*.{jpg,png,svg,gif,webp,ico}",
 			"src/fonts/*.{woff,woff2,ttf,otf,eot,svg}",
 			"src/languages/*.{po,mo,pot}"
