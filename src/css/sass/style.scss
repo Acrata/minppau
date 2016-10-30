@@ -21,6 +21,7 @@
 @import "partials/footer";
 @import "partials/print";
 @import "partials/dl-menu";
+@import "partials/ciudades";
 
 @media (min-width:800px) {
     .news-list {
@@ -414,13 +415,18 @@ main {
 
 .contacto .wrapper {
     background-color:$verde-minppau;
-    height:1000px;
 }
 
 .contacto article {
     /*height:700px;*/
     /*height:auto;*/
     lost-row:1/1 no-flex;
+}
+.page-template.contacto .wrapper {
+    lost-utility:clearfix;
+    height:100%;
+}
+.page-template.contacto article {
 }
 .contacto section {
 }
@@ -560,6 +566,14 @@ select#sedes {
      text-align:center;
 }
 
+.minppau-contact-form-var {
+    padding-top:40px;
+    & > div {
+        lost-column:6/8;
+        lost-move:1/8;
+         margin:auto;
+    }
+}
 .minppau-contact-form {
     float:right;
      min-height:900px;
@@ -579,6 +593,7 @@ select#sedes {
 
 footer {
     lost-row:1/1;
+    margin:0px;
 }
 
 .contacto sidebar {

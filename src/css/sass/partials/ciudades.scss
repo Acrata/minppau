@@ -1,0 +1,41 @@
+.ciudades {
+    main{
+        lost-column:6/8 2;
+        article {
+            padding-top:40px;
+        }
+    }
+    aside {
+        lost-column:2/8;
+    }
+
+        .card-politica{
+            padding-bottom:20px;
+            lost-row:1/5;
+            height:250px;
+            border: {
+                bottom:2px solid $verde-minppau;
+            }
+        }
+            .card-icon-container {
+                lost-column:2/6;
+            }
+                .card-img {
+                    display:flex;
+                        margin-bottom:20px;
+                }
+                    .card-img img {
+                    /*lost-align:center;*/
+                        lost-center:101%;
+                    }
+        .card-action {
+            lost-column:4/6;
+            min-height:206px;
+             display:flex;
+             flex-flow:column;
+        }
+        .card-title {
+            flex:1;
+        }
+
+}
