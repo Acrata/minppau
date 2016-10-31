@@ -21,7 +21,9 @@
 @import "partials/footer";
 @import "partials/print";
 @import "partials/dl-menu";
+@import "partials/single";
 @import "partials/ciudades";
+@import "partials/prensa";
 
 @media (min-width:800px) {
     .news-list {
@@ -600,6 +602,8 @@ footer {
 }
 
 .ministerio .textwidget ,
+.prensa .textwidget ,
+.ciudades .textwidget ,
 .contacto .textwidget {
     padding:20px;
     margin-top:44px;
@@ -649,6 +653,13 @@ footer {
          color:$verde-minppau;
     }
 
+    .prensa main ul {
+        margin:0px;
+        padding:0px;
+    }
+   .single main ul,
+   .prensa main ul,
+    .ciudades article ul ,
     .ministerio article ul {
          display:flex;
          margin:12px;
@@ -681,3 +692,4 @@ footer {
         font-size:18px;
         /*font-size:ms(1);*/
     }
+

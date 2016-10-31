@@ -1,0 +1,23 @@
+.single {
+    
+    main {
+        lost-column:8/12;
+    h1 {
+        font-size:ms(3);
+        text-transform: uppercase;
+        color:$verde-minppau;
+        font-weight:600;
+    }
+    }
+    aside {
+        lost-column:4/12 2;
+    }
+    section {
+        lost-utility:clearfix;
+        .pagination {
+            lost-row:1/1;
+        }
+
+    }
+}
+

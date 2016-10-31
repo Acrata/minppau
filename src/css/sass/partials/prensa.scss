@@ -1,0 +1,59 @@
+.prensa {
+    .wrapper {
+        lost-utility:clearfix;
+    }
+    main {
+        lost-column:8/12;
+    h1 {
+        font-size:ms(3);
+        text-transform: uppercase;
+        color:$verde-minppau;
+        font-weight:600;
+    }
+    }
+    aside {
+        lost-column:4/12 2;
+    }
+    section {
+        lost-utility:clearfix;
+        lost-utility:edit;
+        .pagination {
+            lost-row:1/1;
+        }
+
+    }
+        section article {
+            lost-column:2/4 2;
+            padding:10px 0px;
+            .img-post {
+                width:550px;
+                height:200px;
+                img {
+                    max-height:100%;
+                    max-width:100%;
+                }
+            }
+            h2 {
+                 margin:10px 0px;
+                 a {
+                 font-size:ms(1);
+                 color:$verde-minppau;
+                 text-transform: uppercase;
+                }
+             }
+
+        }
+    .view-article {
+        display: block;
+        background: $verde-minppau;
+        color: $body-bg;
+        text-align: center;
+        text-transform:uppercase;
+        font-size:ms(1);
+        font-family:$font-raleway;
+        font-weight:600;
+        line-height: 2.5;
+        width: 50%;
+        margin: 25px 25px 25px 0px;  
+    }
+}

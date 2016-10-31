@@ -2,6 +2,10 @@
 			<footer class="footer" role="contentinfo">
                 <section class="sedes">
                     <h3>Sedes</h3>
+<p>Ministerio del Poder Popular
+para la Agricultura Urbana
+Edificio Gradillas, Esq. de Gradillas
+a San Jacinto. Caracas 1010</p>
                 </section>
                 <section class="social-footer">
                     <h3>Redes Sociales</h3>

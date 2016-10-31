@@ -97,6 +97,31 @@ function html5blank_nav()
         )
     );
 }
+// Prensa nav
+function prensa_nav()
+{
+    wp_nav_menu(
+    array(
+        'theme_location'  => 'prensa-menu',
+        'menu'            => '',
+        'container'       => 'div',
+        'container_class' => 'menu-{menu slug}-container',
+        'container_id'    => '',
+        'menu_class'      => 'menu',
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul>%3$s</ul>',
+        'depth'           => 0,
+        'walker'          =>  ''
+        )
+    );
+}
+
 
 
 function minppau_menu() {
@@ -205,7 +230,9 @@ function register_html5_menu()
     register_nav_menus(array( // Using array to specify more menus if needed
         'header-menu' => __('Header Menu', 'html5blank'), // Main Navigation
         'sidebar-menu' => __('Sidebar Menu', 'html5blank'), // Sidebar Navigation
-        'extra-menu' => __('Extra Menu', 'html5blank') // Extra Navigation if needed (duplicate as many as you need!)
+        'extra-menu' => __('Extra Menu', 'html5blank'), // Extra Navigation if needed (duplicate as many as you need!)
+        'prensa-menu' => __('Prensa Menu', 'html5blank'), // Extra Navigation if needed (duplicate as many as you need!)
+        'ciudades-menu' => __('Ciudades Menu', 'html5blank') // Extra Navigation if needed (duplicate as many as you need!)
     ));
 }
 
@@ -468,6 +495,7 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 add_shortcode('html5_shortcode_demo', 'html5_shortcode_demo'); // You can place [html5_shortcode_demo] in Pages, Posts now.
 add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [html5_shortcode_demo_2] in Pages, Posts now.
 add_shortcode('minpp_nav_display', 'minpp_nav_display'); // Place [html5_shortcode_demo_2] in Pages, Posts now.
+add_shortcode('ciudades-menu', 'ciudades_menu'); // Place [html5_shortcode_demo_2] in Pages, Posts now.
 add_shortcode('soyagro_widget', 'soyagro_widget'); // Place [html5_shortcode_demo_2] in Pages, Posts now.
 
 // Shortcodes above would be nested like this -
@@ -558,6 +586,31 @@ function minpp_nav()
         )
     );
 }
+
+
+function ciudades_menu()
+{
+    wp_nav_menu(
+    array(
+        'theme_location'  => 'ciudades-menu',
+        'menu'            => '',
+        'container'       => 'div',
+        'container_class' => 'menu-{menu slug}-container',
+        'container_id'    => '',
+        'menu_class'      => 'menu-extra',
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul>%3$s</ul>',
+        'depth'           => 0,
+        'walker'          => ''
+        )
+    );
+}
 // Shortcode Demo with simple <h2> tag
 function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
 {
@@ -585,3 +638,5 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
       );
     return $taxonomies;
   }
+
+

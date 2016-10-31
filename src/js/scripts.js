@@ -1,4 +1,4 @@
-/* global scene, ScrollMagic, TweenMax, Power1, Linear,TweenLite*/
+/* global scene, ScrollMagic, TweenMax, Power1, Linear,TweenLite, console, object_name*/
 /* jshint unused : false */
 (function( root, $, undefined ) {
 	"use strict";
@@ -30,8 +30,18 @@
         var ayudaPanels = TweenMax.to("#panels", 1, {y: 0, opacity:1 , ease:Power1.easeInOut});
         scenePanels.setTween(ayudaPanels);
 
+        var scenePrensaPosts      = new ScrollMagic.Scene({
+            triggerElement: "#prensa-posts",
+            offset: -200
+        })
+
+        .addTo(controller);
+        var prensaPosts = TweenMax.staggerFrom(".prensa article.post", 0.4, {opacity:0, scale:0.8 ,ease:Power1.easeInOut},0.5);
+        scenePrensaPosts.setTween(prensaPosts);
         $("#header").headroom();
         TweenLite.to("#hero-text", 2, {text:{value:"Por las hallacas",delimiter:" ", padSpace: true}, ease:Linear.easeNone});
+        TweenMax.staggerFrom(".prensa article", 0.4, {opacity:0, scale:0.8 ,ease:Power1.easeInOut},0.5);
 	});
+
 
 } ( this, jQuery ));

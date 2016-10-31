@@ -6,10 +6,11 @@
 
 
 .nav {
+    width:65%;
     ul.dl-menu {
         display:flex;
         flex-flow:row;
-        justify-content:space-between;
+        justify-content:space-around;
         li{
            min-width:120px;
             text-align: center; 

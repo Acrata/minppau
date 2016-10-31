@@ -11,15 +11,15 @@
 			<?php endif; ?>
 			<!-- /post thumbnail -->
 <div class="page-wrapper">
+			<h1 class="page-title"><?php the_title(); ?></h1>
+<h3>#Ciudades</h3>
 	<main role="main">
 		<!-- section -->
 		<section>
 
-			<h1><?php the_title(); ?></h1>
-<h3>#Ciudades</h3>
-
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <?php echo do_shortcode('[ciudades-menu]')?>
 
                 <div class="card-politica conucos">
                     <div class="card-icon-container">

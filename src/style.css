@@ -224,28 +224,29 @@ input[type="search"] {
  * ---
  * Menus
  */
-.nav ul.dl-menu {
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-flow: row;
-      -webkit-flex-flow: row;
-      flex-flow: row;
-  -ms-flex-pack: justify;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      justify-content: space-between; }
-  .nav ul.dl-menu li {
-    min-width: 120px;
-    text-align: center;
-    list-style: none; }
-    .nav ul.dl-menu li a {
-      text-transform: uppercase;
-      font-family: "Raleway", sans-serif;
-      font-weight: 500;
-      font-size: 14px;
-      color: #0f9e49; }
+.nav {
+  width: 65%; }
+  .nav ul.dl-menu {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-flow: row;
+        -webkit-flex-flow: row;
+        flex-flow: row;
+    -ms-flex-pack: distribute;
+        -webkit-justify-content: space-around;
+        justify-content: space-around; }
+    .nav ul.dl-menu li {
+      min-width: 120px;
+      text-align: center;
+      list-style: none; }
+      .nav ul.dl-menu li a {
+        text-transform: uppercase;
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        color: #0f9e49; }
 
 .nav ul.dl-submenu li {
   padding: 12px;
@@ -1000,9 +1001,87 @@ All this is done for any sub-level being entered.
 .demo-5 .dl-menuwrapper ul {
   background: #643771; }
 
+.single main {
+  width: -webkit-calc(99.9% * 8/12 - (30px - 30px * 8/12));
+  width: calc(99.9% * 8/12 - (30px - 30px * 8/12)); }
+
+.single main:nth-child(1n) {
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+
+.single main:last-child {
+  margin-right: 0; }
+
+.single main:nth-child(12n) {
+  margin-right: 0;
+  float: right; }
+
+.single main:nth-child(12n + 1) {
+  clear: both; }
+  .single main h1 {
+    font-size: 4.23607em;
+    text-transform: uppercase;
+    color: #0f9e49;
+    font-weight: 600; }
+
+.single aside {
+  width: -webkit-calc(99.9% * 4/12 - (30px - 30px * 4/12));
+  width: calc(99.9% * 4/12 - (30px - 30px * 4/12)); }
+
+.single aside:nth-child(1n) {
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+
+.single aside:last-child {
+  margin-right: 0; }
+
+.single aside:nth-child(2n) {
+  margin-right: 0;
+  float: right; }
+
+.single aside:nth-child(2n + 1) {
+  clear: both; }
+
+.single section:before {
+  content: '';
+  display: table; }
+
+.single section:after {
+  content: '';
+  display: table;
+  clear: both; }
+  .single section .pagination {
+    width: 100%;
+    height: -webkit-calc(99.9% * 1/1 - (30px - 30px * 1/1));
+    height: calc(99.9% * 1/1 - (30px - 30px * 1/1));
+    margin-bottom: 30px; }
+  .single section .pagination:last-child {
+  margin-bottom: 0; }
+
+.ciudades .wrapper {
+  /*lost-utility:edit;*/ }
+
+.ciudades .wrapper:before {/*lost-utility:edit;*/
+  content: '';
+  display: table; }
+
+.ciudades .wrapper:after {/*lost-utility:edit;*/
+  content: '';
+  display: table;
+  clear: both; }
+
+.ciudades .page-title {
+  color: #0f9e49;
+  font-size: 4.23607em;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 50px 0px; }
+
 .ciudades main {
-  width: -webkit-calc(99.9% * 6/8 - (30px - 30px * 6/8));
-  width: calc(99.9% * 6/8 - (30px - 30px * 6/8)); }
+  width: -webkit-calc(99.9% * 5/8 - (30px - 30px * 5/8));
+  width: calc(99.9% * 5/8 - (30px - 30px * 5/8)); }
 
 .ciudades main:nth-child(1n) {
   float: left;
@@ -1019,11 +1098,14 @@ All this is done for any sub-level being entered.
 .ciudades main:nth-child(2n + 1) {
   clear: both; }
   .ciudades main article {
-    padding-top: 40px; }
+    padding: 40px 0px; }
+    .ciudades main article ul {
+      padding-bottom: 20px; }
 
 .ciudades aside {
-  width: -webkit-calc(99.9% * 2/8 - (30px - 30px * 2/8));
-  width: calc(99.9% * 2/8 - (30px - 30px * 2/8)); }
+  width: -webkit-calc(99.9% * 3/8 - (30px - 30px * 3/8));
+  width: calc(99.9% * 3/8 - (30px - 30px * 3/8));
+  padding: 40px 0px; }
 
 .ciudades aside:nth-child(1n) {
   float: left;
@@ -1033,11 +1115,11 @@ All this is done for any sub-level being entered.
 .ciudades aside:last-child {
   margin-right: 0; }
 
-.ciudades aside:nth-child(8n) {
+.ciudades aside:nth-child(2n) {
   margin-right: 0;
   float: right; }
 
-.ciudades aside:nth-child(8n + 1) {
+.ciudades aside:nth-child(2n + 1) {
   clear: both; }
 
 .ciudades .card-politica {
@@ -1051,6 +1133,18 @@ All this is done for any sub-level being entered.
 
 .ciudades .card-politica:last-child {
   margin-bottom: 0; }
+
+.ciudades .conucos {
+  margin-top: 40px;
+  border-top: 2px solid #0f9e49;
+  margin-top: 20px; }
+  .ciudades .conucos .card-icon-container,
+  .ciudades .conucos .card-action {
+    padding-top: 40px; }
+
+.ciudades .zamora {
+  height: 300px;
+  border: 0px; }
 
 .ciudades .card-icon-container {
   width: -webkit-calc(99.9% * 2/6 - (30px - 30px * 2/6));
@@ -1125,6 +1219,130 @@ All this is done for any sub-level being entered.
       -webkit-box-flex: 1;
       -webkit-flex: 1;
       flex: 1; }
+  .ciudades .card-title h2 {
+    font-size: 2.61803em; }
+
+.ciudades .card-desc {
+  font-size: 1.61803em; }
+
+.ciudades .card-action-btn button {
+  width: 25%; }
+
+.prensa .wrapper:before {
+  content: '';
+  display: table; }
+
+.prensa .wrapper:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.prensa main {
+  width: -webkit-calc(99.9% * 8/12 - (30px - 30px * 8/12));
+  width: calc(99.9% * 8/12 - (30px - 30px * 8/12)); }
+
+.prensa main:nth-child(1n) {
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+
+.prensa main:last-child {
+  margin-right: 0; }
+
+.prensa main:nth-child(12n) {
+  margin-right: 0;
+  float: right; }
+
+.prensa main:nth-child(12n + 1) {
+  clear: both; }
+  .prensa main h1 {
+    font-size: 4.23607em;
+    text-transform: uppercase;
+    color: #0f9e49;
+    font-weight: 600; }
+
+.prensa aside {
+  width: -webkit-calc(99.9% * 4/12 - (30px - 30px * 4/12));
+  width: calc(99.9% * 4/12 - (30px - 30px * 4/12)); }
+
+.prensa aside:nth-child(1n) {
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+
+.prensa aside:last-child {
+  margin-right: 0; }
+
+.prensa aside:nth-child(2n) {
+  margin-right: 0;
+  float: right; }
+
+.prensa aside:nth-child(2n + 1) {
+  clear: both; }
+
+.prensa section *:not(input):not(textarea):not(select) {
+  background-color: rgba(0, 0, 255, 0.1); }
+
+.prensa section:before {
+  content: '';
+  display: table; }
+
+.prensa section:after {
+  content: '';
+  display: table;
+  clear: both; }
+  .prensa section .pagination {
+    width: 100%;
+    height: -webkit-calc(99.9% * 1/1 - (30px - 30px * 1/1));
+    height: calc(99.9% * 1/1 - (30px - 30px * 1/1));
+    margin-bottom: 30px; }
+  .prensa section .pagination:last-child {
+  margin-bottom: 0; }
+
+.prensa section article {
+  width: -webkit-calc(99.9% * 2/4 - (30px - 30px * 2/4));
+  width: calc(99.9% * 2/4 - (30px - 30px * 2/4));
+  padding: 10px 0px; }
+
+.prensa section article:nth-child(1n) {
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+
+.prensa section article:last-child {
+  margin-right: 0; }
+
+.prensa section article:nth-child(2n) {
+  margin-right: 0;
+  float: right; }
+
+.prensa section article:nth-child(2n + 1) {
+  clear: both; }
+  .prensa section article .img-post {
+    width: 550px;
+    height: 200px; }
+    .prensa section article .img-post img {
+      max-height: 100%;
+      max-width: 100%; }
+  .prensa section article h2 {
+    margin: 10px 0px; }
+    .prensa section article h2 a {
+      font-size: 1.61803em;
+      color: #0f9e49;
+      text-transform: uppercase; }
+
+.prensa .view-article {
+  display: block;
+  background: #0f9e49;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.61803em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  line-height: 2.5;
+  width: 50%;
+  margin: 25px 25px 25px 0px; }
 
 @media (min-width: 800px) {
   .news-list {
@@ -2122,10 +2340,14 @@ footer:last-child {
   margin-bottom: 0; }
 
 .ministerio .textwidget,
+.prensa .textwidget,
+.ciudades .textwidget,
 .contacto .textwidget {
   padding: 20px;
   margin-top: 44px; }
   .ministerio .textwidget .soyagro-logo-widget,
+  .prensa .textwidget .soyagro-logo-widget,
+  .ciudades .textwidget .soyagro-logo-widget,
   .contacto .textwidget .soyagro-logo-widget {
     position: absolute;
     top: -18%;
@@ -2180,12 +2402,22 @@ button {
   font-size: 1.61803em;
   color: #0f9e49; }
 
+.prensa main ul {
+  margin: 0px;
+  padding: 0px; }
+
+.single main ul,
+.prensa main ul,
+.ciudades article ul,
 .ministerio article ul {
   display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   margin: 12px; }
+  .single main ul li,
+  .prensa main ul li,
+  .ciudades article ul li,
   .ministerio article ul li {
     list-style: none;
     padding: 6px;
@@ -2194,6 +2426,9 @@ button {
     border-radius: 7px;
     width: 33%;
     text-align: center; }
+  .single main ul a,
+  .prensa main ul a,
+  .ciudades article ul a,
   .ministerio article ul a {
     color: #fff;
     font-size: 1.61803em;

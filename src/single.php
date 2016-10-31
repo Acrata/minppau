@@ -1,7 +1,20 @@
 <?php get_header(); ?>
 
+
+
+            <div class="header--single--img" style="background:url(<?php echo the_post_thumbnail_url(); ?>
+) fixed center; background-size:cover; height:30vh;"></div>			<!-- post thumbnail -->
+			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+					<?php //the_post_thumbnail(); // Fullsize image for the single post ?>
+				</a>
+			<?php endif; ?>
+			<!-- /post thumbnail -->
+<div class="page-wrapper">
 	<main role="main">
+<h1>Prensa</h1>
 	<!-- section -->
+    <?php prensa_nav(); ?>
 	<section>
 
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -43,7 +56,7 @@
 
 			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 
-			<?php comments_template(); ?>
+			<?php //comments_template(); ?>
 
 		</article>
 		<!-- /article -->
@@ -67,5 +80,5 @@
 	</main>
 
 <?php get_sidebar(); ?>
-
+</div>
 <?php get_footer(); ?>
